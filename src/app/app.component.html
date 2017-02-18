@@ -1,3 +1,6 @@
-<h1>
-  {{title}}
-</h1>
+<section class="notLoggedIn" *ngIf="!auth.loggedIn()">
+  <app-login></app-login>
+</section>
+<section class="loggedIn" *ngIf="auth.loggedIn()">
+  <h1>test</h1>
+</section>
