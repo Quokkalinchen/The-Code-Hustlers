@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable , Inject} from '@angular/core';
 import { Headers, Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import { CompileTokenMetadata } from '@angular/compiler';
@@ -21,19 +21,18 @@ export class LoginService {
             JSON.stringify({ username, password })
             , { headers }
         ).map((res: Response) => {
-            console.log("status: " + res.status);
             if (res.status < 200 || res.status >= 300) {
                 console.log("error");
                 throw new Error('This request has failed ' + res.status);
             }
             else {
-            console.log("doch kein error?");
             localStorage.setItem('token',res.json().token);
                 return res.json();
             }
-
         });
+    }
 
-
+    logout(){
+      localStorage.removeItem('token');
     }
 }

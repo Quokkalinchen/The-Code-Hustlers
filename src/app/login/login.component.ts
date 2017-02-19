@@ -3,6 +3,7 @@ import { FormControl, FormGroup } from '@angular/forms';
 import { LoginService } from '../login.service';
 
 
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -37,7 +38,7 @@ export class LoginComponent implements OnInit {
   }
 
   logout(){
-    localStorage.removeItem('token');
+    this.loginService.logout();
   }
 
 

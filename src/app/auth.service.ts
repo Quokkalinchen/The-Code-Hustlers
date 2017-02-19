@@ -8,7 +8,6 @@ export class AuthService {
   constructor() { }
 
   loggedIn(): boolean {
-    console.log("test");
     return tokenNotExpired('token');
   }
 
