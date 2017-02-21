@@ -40,14 +40,83 @@
               src="/assets/img/achievedCompetences-inactive.png"></a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="#"><img
-              src="/assets/img/student/superhero-robin-inactive.png"></a></li>
-          <li><a href="#"><img
-              src="/assets/img/school/school-inactive.png"></a></li>
-          <li><a href="#"><img
-              src="/assets/img/studyGroup/studyGroup_2b_inactive.png"></a></li>
-          <li><a href="#"><img src="/assets/img/help-inactive.png"></a></li>
-          <li><a href="" (click)="logout()"><img src="/assets/img/logout-iactive.png"></a></li>
+          <li>
+              <div class="dropdown">
+                <img class="btn dropdown-toggle "
+                  src="/assets/img/student/superhero-robin-inactive.png"
+                  data-toggle="dropdown" id="menu1"> <span class="caret"></span>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                  <li role="presentation">Schülername</li>
+                  <li role="presentation" class="divider"></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1"
+                    href="/help" >Mein Profilbild ändern</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1"
+                    href="/help">Mein Passwort ändern</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1"
+                    href="/help">Mein Profil löschen</a></li>
+                </ul>
+              </div>
+          </li>
+
+          <li>
+              <div class="dropdown">
+                <img class="btn dropdown-toggle "
+                  src="/assets/img/school/school-inactive.png"
+                  data-toggle="dropdown" id="menu1"> <span class="caret"></span>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                  <li role="presentation">Schulinfo</li>
+                  <li role="presentation" class="divider"></li>
+                  <li role="presentation">Straße usw</li>
+                </ul>
+              </div>
+          </li>
+          <li>
+              <div class="dropdown">
+                <img class="btn dropdown-toggle "
+                  src="/assets/img/studyGroup/studyGroup_2b_inactive.png"
+                  data-toggle="dropdown" id="menu1"> <span class="caret"></span>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                  <li role="presentation">Klasseninfo</li>
+                  <li role="presentation" class="divider"></li>
+                  <li role="presentation">Klassenlehrer</li>
+                </ul>
+              </div>
+            </li>
+          <li>
+            <div class="dropdown">
+              <img class="btn dropdown-toggle "
+                src="/assets/img/help-inactive.png"
+                data-toggle="dropdown" id="menu1"> <span class="caret"></span>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                <li role="presentation">Brauchst du Hilfe?</li>
+                <li role="presentation" class="divider"></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1"
+                  href="/help" >So Gehts</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1"
+                  href="/help">Video Tutorials</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1"
+                  href="/help">Häufig gestellte Fragen</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1"
+                  href="/help">Kontakt</a></li>
+              </ul>
+            </div>
+          </li>
+
+          <li>
+            <div class="dropdown">
+              <img class="btn dropdown-toggle "
+                src="/assets/img/logout-iactive.png"
+                data-toggle="dropdown" id="menu1"> <span class="caret"></span>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                <li role="presentation">Möchtest du CHECK verlassen?</li>
+                <li role="presentation" class="divider"></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1"
+                  href="#" (click)="logout()">JA</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1"
+                  href="#">Nein</a></li>
+              </ul>
+            </div>
+          </li>
         </ul>
 
       </div>
