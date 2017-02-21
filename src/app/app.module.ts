@@ -12,13 +12,15 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
-import { HelpComponent } from './help/help.component';
+import { HelpComponent } from './home/help/help.component';
+import { ChangepasswordComponent } from './home/profile/changepassword/changepassword.component';
 
 
 const appRoutes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'home', component: HomeComponent },
   { path: 'help', component: HelpComponent },
+  { path: 'changepassword', component: ChangepasswordComponent },
   { path: '**', component: AppComponent }
 ];
 
@@ -28,7 +30,8 @@ const appRoutes: Routes = [
     AppComponent,
     LoginComponent,
     HomeComponent,
-    HelpComponent
+    HelpComponent,
+    ChangepasswordComponent
   ],
   imports: [
     BrowserModule,
