@@ -22,12 +22,12 @@ export class LoginService {
             , { headers }
         ).map((res: Response) => {
             if (res.status < 200 || res.status >= 300) {
-                console.log("error");
-                throw new Error('This request has failed ' + res.status);
+              console.log("error");
+              throw new Error('This request has failed ' + res.status);
             }
             else {
-            localStorage.setItem('token',res.json().token);
-                return res.json();
+              localStorage.setItem('token',res.json().token);
+              return res.json();
             }
         });
     }

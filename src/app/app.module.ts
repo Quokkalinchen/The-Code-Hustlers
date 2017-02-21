@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { LoginService } from './login.service';
+import { StudentService } from './student.service';
 import { AuthService } from './auth.service';
 import { FormControl, FormGroup } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -38,7 +39,8 @@ const appRoutes: Routes = [
   ],
   providers: [
     LoginService,
-    AuthService
+    AuthService,
+    StudentService
   ],
   bootstrap: [AppComponent]
 })
