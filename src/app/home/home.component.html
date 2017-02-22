@@ -20,9 +20,15 @@
           <li>
             <div class="dropdown">
               <img class="btn dropdown-toggle "
-                src="/assets/img/chapterOverview-inactive.png"
+                src="/assets/images/chapterOverview-active.png"
                 data-toggle="dropdown" id="menu1"> <span class="caret"></span>
               <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                <li role="presentation">
+                  <img
+                    src="/assets/images/confirmation.png">
+                    <p>CHECK Kompetenzliste</p>
+                </li>
+
                 <li role="presentation"><a role="menuitem" tabindex="-1"
                   href="#">Menu item 1</a></li>
                 <li role="presentation"><a role="menuitem" tabindex="-1"
@@ -37,16 +43,22 @@
           </li>
           <li><a href="#"><img src="/assets/img/isInEducationalPlan.png"></a></li>
           <li><a href="#"><img
-              src="/assets/img/achievedCompetences-inactive.png"></a></li>
+              src="/assets/img/achievedCompetences-active.png"></a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <li>
               <div class="dropdown">
                 <img class="btn dropdown-toggle "
-                  src="/assets/img/student/superhero-robin-inactive.png"
+                  src="/assets/{{avatar.avatarUrl}}"
                   data-toggle="dropdown" id="menu1"> <span class="caret"></span>
                 <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-                  <li role="presentation">Schülername</li>
+                  <li role="presentation">
+                    <img
+                      src="/assets/{{avatar.avatarBigUrl}}"
+                      >
+                    <p>{{studentData.forename}} {{studentData.surname}}</p>
+                    <p>{{studentData.birth}}</p>
+                  </li>
                   <li role="presentation" class="divider"></li>
                   <li role="presentation"><a role="menuitem" tabindex="-1"
                     href="/changeavatar" >Mein Profilbild ändern</a></li>
@@ -61,34 +73,49 @@
           <li>
               <div class="dropdown">
                 <img class="btn dropdown-toggle "
-                  src="/assets/images/school/school-inactive.png"
+                  src="/assets/{{school.imageUrl}}"
                   data-toggle="dropdown" id="menu1"> <span class="caret"></span>
                 <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-                  <li role="presentation">Schulinfo</li>
+                  <li role="presentation">
+                    <img
+                      src="assets/{{school.imageUrlBig}}">
+                    <p>{{school.name}}</p>
+                  </li>
                   <li role="presentation" class="divider"></li>
-                  <li role="presentation">Straße usw</li>
+                  <li role="presentation">{{school.address}}</li>
+                  <li role="presentation">{{school.country}}</li>
+                  <li role="presentation">{{school.telefon}}</li>
+                  <li role="presentation">{{school.email}}</li>
                 </ul>
               </div>
           </li>
           <li>
               <div class="dropdown">
                 <img class="btn dropdown-toggle "
-                  src="/assets/img/studyGroup/studyGroup_2b_inactive.png"
+                  src="/assets/{{studyGroups.imageUrl}}"
                   data-toggle="dropdown" id="menu1"> <span class="caret"></span>
                 <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-                  <li role="presentation">Klasseninfo</li>
+                  <li role="presentation">
+                    <img
+                      src="assets/{{studyGroups.imageUrlBig}}">
+                    <p>{{studyGroups.formteacher}}</p>
+                  </li>
                   <li role="presentation" class="divider"></li>
-                  <li role="presentation">Klassenlehrer</li>
+                  <li role="presentation">{{studentData.formteacher}}</li>
                 </ul>
               </div>
             </li>
           <li>
             <div class="dropdown">
               <img class="btn dropdown-toggle "
-                src="/assets/img/help-inactive.png"
+                src="/assets/images/help-active.png"
                 data-toggle="dropdown" id="menu1"> <span class="caret"></span>
               <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-                <li role="presentation">Brauchst du Hilfe?</li>
+                <li role="presentation">
+                  <img
+                    src="/assets/images/help-big.png"
+                    >
+                    <p>Brauchst du Hilfe?</p></li>
                 <li role="presentation" class="divider"></li>
                 <li role="presentation"><a role="menuitem" tabindex="-1"
                   href="/help" >So Gehts</a></li>
@@ -105,10 +132,15 @@
           <li>
             <div class="dropdown">
               <img class="btn dropdown-toggle "
-                src="/assets/img/logout-iactive.png"
+                src="/assets/images/logout-active.png"
                 data-toggle="dropdown" id="menu1"> <span class="caret"></span>
               <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-                <li role="presentation">Möchtest du CHECK verlassen?</li>
+                <li role="presentation">
+                  <img
+                    src="/assets/images/logout-big.png"
+                    >
+                    <p>Möchtest du CHECK verlassen?</p>
+                  </li>
                 <li role="presentation" class="divider"></li>
                 <li role="presentation"><a role="menuitem" tabindex="-1"
                   href="#" (click)="logout()">JA</a></li>
@@ -132,6 +164,10 @@
 
 
 <router-outlet></router-outlet>
+<p>{{studentData.forename}}</p>
+<p>{{studentData.forename}}</p>
+<p></p>
+
 
 </section>
 </main>

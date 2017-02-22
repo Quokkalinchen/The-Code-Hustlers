@@ -34,6 +34,16 @@ export class StudentService {
 
   }
 
+  getAvatar(id) {
+    var headers: Headers;
+    headers = new Headers();
+    headers.append('Authorization', localStorage.getItem('token'));
+    headers.append('Content-Type', 'application/json');
+
+    return this.http.get('http://46.101.204.215:1337/api/V1/avatar/{{id}}',
+    {headers}).map(response => response.json());
+  }
+
   changePasword(password, newpassword){
     var headers: Headers;
     headers = new Headers();
