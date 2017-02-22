@@ -9,7 +9,7 @@
             class="icon-bar"></span>
         </button>
         <ul class="nav navbar-nav navbar-brand brand-centered">
-          <li><img src="/assets/img/logo.png"></li>
+          <li><img src="/assets/images/logo.png"></li>
         </ul>
 
       </div>
@@ -29,21 +29,49 @@
                     <p>CHECK Kompetenzliste</p>
                 </li>
 
-                <li role="presentation"><a role="menuitem" tabindex="-1"
-                  href="#">Menu item 1</a></li>
-                <li role="presentation"><a role="menuitem" tabindex="-1"
-                  href="#">Menu item 2</a></li>
-                <li role="presentation"><a role="menuitem" tabindex="-1"
-                  href="#">Menu item 3</a></li>
-                <li role="presentation" class="divider"></li>
-                <li role="presentation"><a role="menuitem" tabindex="-1"
-                  href="#">Menu item 4</a></li>
+                <li *ngFor="let chapter of chapters" role="presentation"><a role="menuitem" tabindex="-1"
+                  href="#">{{chapter.name}}</a></li>
               </ul>
             </div>
           </li>
-          <li><a href="#"><img src="/assets/img/isInEducationalPlan.png"></a></li>
-          <li><a href="#"><img
-              src="/assets/img/achievedCompetences-active.png"></a></li>
+          <li>
+            <div class="dropdown">
+              <img class="btn dropdown-toggle"
+                src="/assets/images/educationalPlan-active.png"
+                data-toggle="dropdown" id="menu1"> <span class="caret"></span>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                <li role="presentation">
+                  <img
+                    src="/assets/images/educationalPlan-big.png">
+                    <p>Förderplan</p>
+                </li>
+
+                <li *ngFor="let competence of educationalPlan" role="presentation"><a role="menuitem" tabindex="-1"
+                  href="#">{{competence.name}}</a></li>
+              </ul>
+            </div>
+          </li>
+
+
+          <li>
+              <div class="dropdown">
+                <img class="btn dropdown-toggle"
+                  src="/assets/images/achievedCompetences-active.png"
+                  data-toggle="dropdown" id="menu1"> <span class="caret"></span>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                  <li role="presentation">
+                    <img
+                      src="/assets/images/achievedCompetences-big.png">
+                      <p>Das kann ich!</p>
+                  </li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1"
+                    href="#">Alle Kompetenzen</a></li>
+                  <li *ngFor="let chapter of chapters" role="presentation"><a role="menuitem" tabindex="-1"
+                    href="#">{{chapter.name}}</a></li>
+                </ul>
+              </div>
+
+          </li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <li>

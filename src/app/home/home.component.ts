@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { LoginService } from '../login.service';
 import { StudentService } from '../student.service';
+import { CompetencesService } from '../competences.service';
 
 
 
@@ -15,8 +16,10 @@ export class HomeComponent implements OnInit {
   private school = "";
   private studyGroups = "";
   private avatar = "";
+  private chapters = "";
+  private educationalPlan = "";
 
-  constructor(private loginService: LoginService, private studentService: StudentService) { }
+  constructor(private loginService: LoginService, private studentService: StudentService, private competencesService: CompetencesService) { }
 
   ngOnInit() {
     this.studentService.getStudentData().subscribe(
@@ -29,6 +32,18 @@ export class HomeComponent implements OnInit {
           this.avatar = data;
         }
        );
+     }
+    );
+
+    this.competencesService.getChapters().subscribe(
+     data => {
+       this.chapters = data;
+     }
+    );
+
+    this.competencesService.getEducationalPlan().subscribe(
+     data => {
+       this.educationalPlan = data;
      }
     );
 
