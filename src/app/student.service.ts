@@ -43,12 +43,12 @@ export class StudentService {
     });
   }
 
-  deleteProfile(password){
+  deleteProfile(){
     var headers: Headers;
     headers = new Headers();
     headers.append('Authorization', localStorage.getItem('token'));
     headers.append('Content-Type', 'application/json');
-    return this.http.delete('http://46.101.204.215:1337/api/V1/student/', {headers}
+    return this.http.delete('http://46.101.204.215:1337/api/V1/student', {headers}
     ).map((res: Response) => {
         if (res.status < 200 || res.status >= 300) {
           console.log("error");

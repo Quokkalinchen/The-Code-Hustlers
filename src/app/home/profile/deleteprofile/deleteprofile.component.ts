@@ -26,7 +26,12 @@ export class DeleteprofileComponent implements OnInit {
   deleteProfile(){
     this.password = this.deleteProfileForm.value.password;
 
-    alert(this.password);
+    this.studentService.deleteProfile().subscribe(
+     data => {
+       alert("Profil wurde gelöscht");
+       this.response = data;
+     }
+    );;
 
   }
 
