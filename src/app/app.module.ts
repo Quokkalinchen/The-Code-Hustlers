@@ -14,6 +14,7 @@ import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { HelpComponent } from './home/help/help.component';
 import { ChangepasswordComponent } from './home/profile/changepassword/changepassword.component';
+import { DeleteprofileComponent } from './home/profile/deleteprofile/deleteprofile.component';
 
 
 const appRoutes: Routes = [
@@ -21,6 +22,7 @@ const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'help', component: HelpComponent },
   { path: 'changepassword', component: ChangepasswordComponent },
+  { path: 'deleteprofile', component: DeleteprofileComponent },
   { path: '**', component: AppComponent }
 ];
 
@@ -31,7 +33,8 @@ const appRoutes: Routes = [
     LoginComponent,
     HomeComponent,
     HelpComponent,
-    ChangepasswordComponent
+    ChangepasswordComponent,
+    DeleteprofileComponent
   ],
   imports: [
     BrowserModule,
