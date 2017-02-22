@@ -1,0 +1,22 @@
+<h1>works</h1>
+
+<div class="container-fluid" align="center">
+  <div class="row-fluid">
+    <div class="col-md-6 col-md-offset-3">
+      <p>Avatar ändern</p>
+
+      <ul>
+            <li *ngFor="let avatar of avatars">
+              <a href="#" (click)="changeAvatar(avatar._id)"><img
+                  src="/assets/{{ avatar.avatarBigUrl }}"></a>
+
+              {{ avatar._id }}
+            </li>
+          </ul>
+
+
+
+</div>
+</div>
+<div class="row-fluid">
+<div class="col-md-6 col-md-offset-3">

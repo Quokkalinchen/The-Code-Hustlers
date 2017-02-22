@@ -11,20 +11,27 @@ import { StudentService } from '../student.service';
   providers: [StudentService]
 })
 export class HomeComponent implements OnInit {
-  private response = "";
+  private studentData = "";
 
   constructor(private loginService: LoginService, private studentService: StudentService) { }
 
   ngOnInit() {
     this.studentService.getStudentData().subscribe(
      data => {
-       this.response = data;
+       this.studentData = data;
      }
     );
 
+
+
   }
 
+  dump(){
+
+        console.log(this.studentData);
+  }
   logout(){
+
     this.loginService.logout();
   }
 

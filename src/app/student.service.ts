@@ -24,6 +24,16 @@ export class StudentService {
 
   }
 
+  getAllAvatars() {
+    var headers: Headers;
+    headers = new Headers();
+    headers.append('Authorization', localStorage.getItem('token'));
+    headers.append('Content-Type', 'application/json');
+
+    return this.http.get('http://46.101.204.215:1337/api/V1/avatar',{headers}).map(response => response.json());
+
+  }
+
   changePasword(password, newpassword){
     var headers: Headers;
     headers = new Headers();
@@ -31,6 +41,25 @@ export class StudentService {
     headers.append('Content-Type', 'application/json');
     return this.http.put('http://46.101.204.215:1337/api/V1/requestPasswordRecovery',
         JSON.stringify({ password, newpassword })
+        , {headers}
+    ).map((res: Response) => {
+        if (res.status < 200 || res.status >= 300) {
+          console.log("error");
+          throw new Error('This request has failed ' + res.status);
+        }
+        else {
+          return res.json();
+        }
+    });
+  }
+
+  changeAvatar(avatarId){
+    var headers: Headers;
+    headers = new Headers();
+    headers.append('Authorization', localStorage.getItem('token'));
+    headers.append('Content-Type', 'application/json');
+    return this.http.put('http://46.101.204.215:1337/api/V1/avatar/',
+        JSON.stringify({ avatarId })
         , {headers}
     ).map((res: Response) => {
         if (res.status < 200 || res.status >= 300) {
