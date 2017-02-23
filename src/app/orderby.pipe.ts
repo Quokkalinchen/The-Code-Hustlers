@@ -5,8 +5,6 @@ export class OrderBy implements PipeTransform {
 
   static _orderByComparator(a:any, b:any):number{
 
-    console.log(a);
-    console.log(b);
     if( (a === null || a === undefined) && (b === null || b === undefined) ){
         return 0;
     }
