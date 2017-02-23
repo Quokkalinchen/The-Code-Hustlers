@@ -1,28 +1,19 @@
-<p>
-  deleteprofile works!
-</p>
-<h1>sjdsjkfh<h1>
-
-
-
 <div class="container-fluid" align="center">
   <div class="row-fluid">
     <div class="col-md-6 col-md-offset-3">
-      <p>Profil löschen</p>
+      <h1>Profil löschen</h1>
 
 
-<form class="login-form" [formGroup]="deleteProfileForm" novalidate (ngSubmit)="deleteProfile()">
-  <div class="form-group">
-    <div class = "input-group">
-      <span class="input-group-addon" id="basic-addon1">Passwort: </span>
-      <input type="password" class="form-control input-login" id="password"
-        placeholder="*********" formControlName="password">
+      <form class="login-form" [formGroup]="deleteProfileForm" novalidate (ngSubmit)="deleteProfile()">
+      <div class="form-group">
+        <div class = "input-group">
+          <span class="input-group-addon" id="basic-addon1">Passwort: </span>
+          <input type="password" class="form-control input-login" id="password"
+            placeholder="*********" formControlName="password">
+        </div>
+          <button id="btn-los"  type="submit" class="btn btn-default">LÖSCHEN</button>
+      </div>
+      </form>
     </div>
-      <button id="btn-los"  type="submit" class="btn btn-default">LÖSCHEN</button>
   </div>
-
-</form>
 </div>
-</div>
-<div class="row-fluid">
-<div class="col-md-6 col-md-offset-3">

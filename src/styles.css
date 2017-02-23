@@ -10,11 +10,20 @@
 
 
 #main{
-  margin-top: 80px;
+  margin-top: 52px;
 }
 
-.competences{
+.chapter{
+  
+}
+
+.competence{
   background-image: url(/assets/images/contentTextBubble.png);
+  background-repeat: no-repeat;
+  width: 369px;
+  height: 120px;
+
+
 
 }
 

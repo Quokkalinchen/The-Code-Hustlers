@@ -13,20 +13,24 @@ export class AllcompetencesComponent implements OnInit {
   private allStudentCompetences = "";
   private chapterDetails = "";
   private chapterId: number;
-  private chapterPath = '<img src="/assets/images/chapter';
+  private chapterPath = 'chapter';
+  private bg = "";
 
   constructor(private competencesService: CompetencesService, private route: ActivatedRoute) { }
 
   ngOnInit() {
     this.route.params.subscribe(params => {
-
+        this.chapterId = null;
+        this.chapterPath = 'chapter';
         this.chapterId = params['id'];
+        this.bg = 'style="background-color: ';
+
         if (this.chapterId < 10){
           this.chapterPath = this.chapterPath + '0' + this.chapterId;
         }else{
           this.chapterPath = this.chapterPath + this.chapterId;
         }
-        this.chapterPath = this.chapterPath + "/competenceDone.png";
+
 
         this.competencesService.getAllStudentCompetences(this.chapterId).subscribe(
          data => {
@@ -35,12 +39,11 @@ export class AllcompetencesComponent implements OnInit {
         );
         this.competencesService.getChapterDetails(this.chapterId).subscribe(
          data => {
+           this.bg = this.bg + data.weakcolor + '"';
            this.chapterDetails = data;
          }
         );
     });
-
-
 
   }
 
