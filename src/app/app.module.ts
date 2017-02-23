@@ -22,7 +22,7 @@ import { ChangeavatarComponent } from './home/profile/changeavatar/changeavatar.
 import { AllcompetencesComponent } from './home/competences/allcompetences/allcompetences.component';
 import { AchievedcompetencesComponent } from './home/competences/achievedcompetences/achievedcompetences.component';
 import { AllachievedcompetencesComponent } from './home/competences/allachievedcompetences/allachievedcompetences.component';
-import { EducationalplanComponent } from './educationalplan/educationalplan.component';
+import { EducationalplanComponent } from './home/competences/educationalplan/educationalplan.component';
 
 
 const appRoutes: Routes = [
@@ -35,6 +35,7 @@ const appRoutes: Routes = [
   { path: 'allcompetences/:id', component: AllcompetencesComponent },
   { path: 'achievedcompetences', component: AllachievedcompetencesComponent },
   { path: 'achievedcompetences/:id', component: AchievedcompetencesComponent },
+  { path: 'educationalplancompetences/:id', component: EducationalplanComponent },
   { path: '**', component: AppComponent }
 ];
 

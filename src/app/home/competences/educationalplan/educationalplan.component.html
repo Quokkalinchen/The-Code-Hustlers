@@ -1,3 +1,20 @@
 <p>
   educationalplan works!
 </p>
+
+
+<div class="chapter" >
+
+<div class="container-fluid" align="center">
+  <div class="row-fluid">
+    <div class="col-md-6 col-md-offset-3">
+      <div class = "competence jumpotron" *ngFor="let competence of educationalPlanCompetences" role="presentation" >
+        <a href="#" data-toggle="tooltip" data-placement="right"
+          title="Du hast diese Kompetenz am  erreicht">
+        <p>{{competence.note}}</p>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

@@ -48,7 +48,7 @@
                 </li>
 
                 <li *ngFor="let competence of educationalPlan" role="presentation">
-                  <a role="menuitem" tabindex="-1" href="#" >{{competence.name}}</a></li>
+                  <a role="menuitem" tabindex="-1" href="#" [routerLink]="['/educationalplancompetences', competence._id]">{{competence.name}}</a></li>
               </ul>
             </div>
           </li>

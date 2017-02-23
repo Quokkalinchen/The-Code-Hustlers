@@ -67,4 +67,10 @@ export class CompetencesService {
       {headers}).map(response => response.json());
   }
 
+  getEducationalPlanById(id) {
+    var headers: Headers;
+    headers = this.getHeader();
+    return this.http.get('http://46.101.204.215:1337/api/V1/educationalPlan/' + id,{headers}).map(response => response.json());
+  }
+
 }
