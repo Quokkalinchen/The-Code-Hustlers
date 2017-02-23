@@ -14,7 +14,6 @@ export class AllcompetencesComponent implements OnInit {
   private chapterDetails = "";
   private chapterId: number;
   private chapterPath = 'chapter';
-  private bg = "";
 
   constructor(private competencesService: CompetencesService, private route: ActivatedRoute) { }
 
@@ -23,7 +22,6 @@ export class AllcompetencesComponent implements OnInit {
         this.chapterId = null;
         this.chapterPath = 'chapter';
         this.chapterId = params['id'];
-        this.bg = 'style="background-color: ';
 
         if (this.chapterId < 10){
           this.chapterPath = this.chapterPath + '0' + this.chapterId;
@@ -39,7 +37,6 @@ export class AllcompetencesComponent implements OnInit {
         );
         this.competencesService.getChapterDetails(this.chapterId).subscribe(
          data => {
-           this.bg = this.bg + data.weakcolor + '"';
            this.chapterDetails = data;
          }
         );

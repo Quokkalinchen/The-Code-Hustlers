@@ -6,8 +6,6 @@ import { LoginService } from './login.service';
 import { StudentService } from './student.service';
 import { CompetencesService } from './competences.service';
 import { AuthService } from './auth.service';
-import { AuthModule } from './auth.module';
-import { AuthHttp, AuthConfig, AUTH_PROVIDERS, provideAuth } from 'angular2-jwt';
 import { FormControl, FormGroup } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
@@ -24,6 +22,7 @@ import { ChangeavatarComponent } from './home/profile/changeavatar/changeavatar.
 import { AllcompetencesComponent } from './home/competences/allcompetences/allcompetences.component';
 import { AchievedcompetencesComponent } from './home/competences/achievedcompetences/achievedcompetences.component';
 import { AllachievedcompetencesComponent } from './home/competences/allachievedcompetences/allachievedcompetences.component';
+import { EducationalplanComponent } from './educationalplan/educationalplan.component';
 
 
 const appRoutes: Routes = [
@@ -53,7 +52,8 @@ const appRoutes: Routes = [
     AllcompetencesComponent,
     AchievedcompetencesComponent,
     AllachievedcompetencesComponent,
-    OrderBy
+    OrderBy,
+    EducationalplanComponent
 
   ],
   imports: [
@@ -61,8 +61,7 @@ const appRoutes: Routes = [
     FormsModule,
     HttpModule,
     ReactiveFormsModule,
-    RouterModule.forRoot(appRoutes),
-    AuthModule
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [
     LoginService,

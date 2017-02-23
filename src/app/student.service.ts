@@ -1,6 +1,5 @@
 import { Injectable , Inject} from '@angular/core';
 import { Headers, Http, Response } from '@angular/http';
-import { AuthHttp } from 'angular2-jwt';
 import { Observable } from 'rxjs/Observable';
 import { CompileTokenMetadata } from '@angular/compiler';
 import { AuthService } from './auth.service';
@@ -11,7 +10,7 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class StudentService {
 
-  constructor(private http: Http, public authHttp: AuthHttp, private auth: AuthService) {
+  constructor(private http: Http) {
 
 
 }
