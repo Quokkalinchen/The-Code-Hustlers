@@ -18,6 +18,7 @@ import { ChangepasswordComponent } from './home/profile/changepassword/changepas
 import { DeleteprofileComponent } from './home/profile/deleteprofile/deleteprofile.component';
 import { ChangeavatarComponent } from './home/profile/changeavatar/changeavatar.component';
 import { AllcompetencesComponent } from './home/competences/allcompetences/allcompetences.component';
+import { AchievedcompetencesComponent } from './home/competences/achievedcompetences/achievedcompetences.component';
 
 
 const appRoutes: Routes = [
@@ -28,6 +29,7 @@ const appRoutes: Routes = [
   { path: 'deleteprofile', component: DeleteprofileComponent },
   { path: 'changeavatar', component: ChangeavatarComponent },
   { path: 'allcompetences/:id', component: AllcompetencesComponent },
+  { path: 'achievedcompetences/:id', component: AchievedcompetencesComponent },
   { path: '**', component: AppComponent }
 ];
 
@@ -41,7 +43,8 @@ const appRoutes: Routes = [
     ChangepasswordComponent,
     DeleteprofileComponent,
     ChangeavatarComponent,
-    AllcompetencesComponent
+    AllcompetencesComponent,
+    AchievedcompetencesComponent
   ],
   imports: [
     BrowserModule,

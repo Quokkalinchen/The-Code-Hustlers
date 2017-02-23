@@ -47,8 +47,8 @@
                     <p>Förderplan</p>
                 </li>
 
-                <li *ngFor="let competence of educationalPlan" role="presentation"><a role="menuitem" tabindex="-1"
-                  href="#">{{competence.name}}</a></li>
+                <li *ngFor="let competence of educationalPlan" role="presentation">
+                  <a role="menuitem" tabindex="-1" href="#" >{{competence.name}}</a></li>
               </ul>
             </div>
           </li>
@@ -67,8 +67,8 @@
                   </li>
                   <li role="presentation"><a role="menuitem" tabindex="-1"
                     href="#">Alle Kompetenzen</a></li>
-                  <li *ngFor="let chapter of chapters" role="presentation"><a role="menuitem" tabindex="-1"
-                    href="#">{{chapter.name}}</a></li>
+                  <li *ngFor="let chapter of chapters" role="presentation">
+                    <a role="menuitem" tabindex="-1" href="#" [routerLink]="['/achievedcompetences', chapter._id]">{{chapter.name}}</a></li>
                 </ul>
               </div>
 
