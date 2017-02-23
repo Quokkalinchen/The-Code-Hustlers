@@ -7,8 +7,15 @@
     }
 }
 
+
+
 #main{
   margin-top: 80px;
+}
+
+.competences{
+  background-image: url(/assets/images/contentTextBubble.png);
+
 }
 
 .brand-centered {

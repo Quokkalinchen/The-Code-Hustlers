@@ -29,8 +29,9 @@
                     <p>CHECK Kompetenzliste</p>
                 </li>
 
-                <li *ngFor="let chapter of chapters" role="presentation"><a role="menuitem" tabindex="-1"
-                  href="#">{{chapter.name}}</a></li>
+                <li *ngFor="let chapter of chapters" role="presentation">
+                  <a role="menuitem" tabindex="-1" [routerLink]="['/allcompetences', chapter._id]" >{{chapter.name}}</a>
+                </li>
               </ul>
             </div>
           </li>
@@ -149,8 +150,8 @@
                   href="/help" >So Gehts</a></li>
                 <li role="presentation"><a role="menuitem" tabindex="-1"
                   href="/help">Video Tutorials</a></li>
-                <li role="presentation"><a role="menuitem" tabindex="-1"
-                  href="/help">Häufig gestellte Fragen</a></li>
+                <li role="presentation"><a [routerLink]="['/help']"role="menuitem" tabindex="-1"
+                  >Häufig gestellte Fragen</a></li>
                 <li role="presentation"><a role="menuitem" tabindex="-1"
                   href="#" (click)="dump()">Kontakt</a></li>
               </ul>

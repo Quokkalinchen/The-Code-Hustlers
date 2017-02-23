@@ -1,18 +1,16 @@
-<p>
-  1 allcompetences works!
-</p>
-<p>
-  allcompetences works!
-</p>
-<p>
-  allcompetences works!
-</p>
-<p>
-  allcompetences works!
-</p>
-<p>
-  allcompetences works!
-</p>
-<ul>
-<li *ngFor="let competence of allStudentCompetences" role="presentation"><p>{{competence.studentText}}</p></li>
-</ul>
+<h1>{{chapterDetails.name}}</h1>
+
+<div class = "competence" *ngFor="let competence of allStudentCompetences" role="presentation">
+  <ul>
+      <li><p>{{competence.studentText}}</p></li>
+      <div *ngIf="competence.checked == false" >
+        <img src="/assets/images/chapter01/competenceUndone.png">
+      </div>
+      <div *ngIf="competence.checked == true" >
+
+
+        <img src="/assets/images/chapter01/competenceDone.png">
+      </div>
+  </ul>
+
+</div>

@@ -27,7 +27,7 @@ const appRoutes: Routes = [
   { path: 'changepassword', component: ChangepasswordComponent },
   { path: 'deleteprofile', component: DeleteprofileComponent },
   { path: 'changeavatar', component: ChangeavatarComponent },
-  { path: 'allcompetences', component: AllcompetencesComponent },
+  { path: 'allcompetences/:id', component: AllcompetencesComponent },
   { path: '**', component: AppComponent }
 ];
 
