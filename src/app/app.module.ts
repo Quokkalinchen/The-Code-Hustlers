@@ -6,6 +6,8 @@ import { LoginService } from './login.service';
 import { StudentService } from './student.service';
 import { CompetencesService } from './competences.service';
 import { AuthService } from './auth.service';
+import { AuthModule } from './auth.module';
+import { AuthHttp, AuthConfig, AUTH_PROVIDERS, provideAuth } from 'angular2-jwt';
 import { FormControl, FormGroup } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
@@ -38,6 +40,7 @@ const appRoutes: Routes = [
 ];
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -58,7 +61,8 @@ const appRoutes: Routes = [
     FormsModule,
     HttpModule,
     ReactiveFormsModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    AuthModule
   ],
   providers: [
     LoginService,
