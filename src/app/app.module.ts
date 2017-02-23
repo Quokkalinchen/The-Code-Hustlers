@@ -50,7 +50,8 @@ const appRoutes: Routes = [
     AllcompetencesComponent,
     AchievedcompetencesComponent,
     AllachievedcompetencesComponent,
-    
+    OrderBy
+
   ],
   imports: [
     BrowserModule,

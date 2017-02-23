@@ -5,7 +5,7 @@
 <div class="container-fluid" align="center">
   <div class="row-fluid">
     <div class="col-md-6 col-md-offset-3">
-      <div class = "competence jumpotron" *ngFor="let competence of allAchievedCompetences" role="presentation" >
+      <div class = "competence jumpotron" *ngFor="let competence of allAchievedCompetences | orderBy : ['chapterId']" role="presentation" >
         <a href="#" data-toggle="tooltip" data-placement="right"
           title="Du hast diese Kompetenz am {{competence.fromDate}} erreicht">
         <p>{{competence.studentText}}</p>
