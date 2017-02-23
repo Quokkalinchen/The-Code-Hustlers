@@ -43,13 +43,7 @@ export class CompetencesService {
     return this.http.get('http://46.101.204.215:1337/api/V1/educationalPlan',{headers}).map(response => response.json());
   }
 
-  getEducationalPlan() {
-    var headers: Headers;
-    headers = new Headers();
-    headers.append('Authorization', localStorage.getItem('token'));
-    headers.append('Content-Type', 'application/json');
-    return this.http.get('http://46.101.204.215:1337/api/V1/educationalPlan',{headers}).map(response => response.json());
-  }
+
 
   getStudentCompetencesPerChapter(id) {
     var headers: Headers;
@@ -66,6 +60,15 @@ export class CompetencesService {
     headers.append('Authorization', localStorage.getItem('token'));
     headers.append('Content-Type', 'application/json');
     return this.http.get('http://46.101.204.215:1337/api/V1/studentcompetence?checked=true&chapterId=' + id,
+      {headers}).map(response => response.json());
+  }
+
+  getStudentAchievedCompetences() {
+    var headers: Headers;
+    headers = new Headers();
+    headers.append('Authorization', localStorage.getItem('token'));
+    headers.append('Content-Type', 'application/json');
+    return this.http.get('http://46.101.204.215:1337/api/V1/studentcompetence?checked=true',
       {headers}).map(response => response.json());
   }
 

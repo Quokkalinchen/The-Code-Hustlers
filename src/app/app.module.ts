@@ -9,6 +9,8 @@ import { AuthService } from './auth.service';
 import { FormControl, FormGroup } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
+import { OrderBy } from './orderby.pipe';
+
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
@@ -19,6 +21,7 @@ import { DeleteprofileComponent } from './home/profile/deleteprofile/deleteprofi
 import { ChangeavatarComponent } from './home/profile/changeavatar/changeavatar.component';
 import { AllcompetencesComponent } from './home/competences/allcompetences/allcompetences.component';
 import { AchievedcompetencesComponent } from './home/competences/achievedcompetences/achievedcompetences.component';
+import { AllachievedcompetencesComponent } from './home/competences/allachievedcompetences/allachievedcompetences.component';
 
 
 const appRoutes: Routes = [
@@ -29,6 +32,7 @@ const appRoutes: Routes = [
   { path: 'deleteprofile', component: DeleteprofileComponent },
   { path: 'changeavatar', component: ChangeavatarComponent },
   { path: 'allcompetences/:id', component: AllcompetencesComponent },
+  { path: 'achievedcompetences', component: AllachievedcompetencesComponent },
   { path: 'achievedcompetences/:id', component: AchievedcompetencesComponent },
   { path: '**', component: AppComponent }
 ];
@@ -44,7 +48,9 @@ const appRoutes: Routes = [
     DeleteprofileComponent,
     ChangeavatarComponent,
     AllcompetencesComponent,
-    AchievedcompetencesComponent
+    AchievedcompetencesComponent,
+    AllachievedcompetencesComponent,
+    
   ],
   imports: [
     BrowserModule,

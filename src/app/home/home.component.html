@@ -66,7 +66,7 @@
                       <p>Das kann ich!</p>
                   </li>
                   <li role="presentation"><a role="menuitem" tabindex="-1"
-                    href="#">Alle Kompetenzen</a></li>
+                    href="#" [routerLink]="['/achievedcompetences']">Alle Kompetenzen</a></li>
                   <li *ngFor="let chapter of chapters" role="presentation">
                     <a role="menuitem" tabindex="-1" href="#" [routerLink]="['/achievedcompetences', chapter._id]">{{chapter.name}}</a></li>
                 </ul>
