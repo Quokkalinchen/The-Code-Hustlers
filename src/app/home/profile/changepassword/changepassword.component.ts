@@ -34,7 +34,7 @@ export class ChangepasswordComponent implements OnInit {
 
 
    if(this.passwordNew == this.passwordRepeat){
-     this.studentService.changePasword(this.passwordOld,this.passwordNew).subscribe(
+     this.studentService.changePassword(this.passwordOld,this.passwordNew).subscribe(
       data => {
         alert("Passwort wurde geändert");
         this.response = data;

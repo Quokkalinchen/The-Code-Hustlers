@@ -19,9 +19,7 @@ export class StudentService {
     headers = new Headers();
     headers.append('Authorization', localStorage.getItem('token'));
     headers.append('Content-Type', 'application/json');
-
     return this.http.get('http://46.101.204.215:1337/api/V1/student',{headers}).map(response => response.json());
-
   }
 
   getAllAvatars() {
@@ -40,11 +38,11 @@ export class StudentService {
     headers.append('Authorization', localStorage.getItem('token'));
     headers.append('Content-Type', 'application/json');
 
-    return this.http.get('http://46.101.204.215:1337/api/V1/avatar/{{id}}',
+    return this.http.get('http://46.101.204.215:1337/api/V1/avatar/' + id,
     {headers}).map(response => response.json());
   }
 
-  changePasword(password, newpassword){
+  changePassword(password, newpassword){
     var headers: Headers;
     headers = new Headers();
     headers.append('Authorization', localStorage.getItem('token'));
@@ -55,6 +53,7 @@ export class StudentService {
     ).map((res: Response) => {
         if (res.status < 200 || res.status >= 300) {
           console.log("error");
+          alert('Passwort konnte nicht geändert werden. Es ist ein Fehler aufgetreten.');
           throw new Error('This request has failed ' + res.status);
         }
         else {
@@ -72,8 +71,10 @@ export class StudentService {
         JSON.stringify({ avatarId })
         , {headers}
     ).map((res: Response) => {
+
         if (res.status < 200 || res.status >= 300) {
           console.log("error");
+          alert('Avatar konnte nicht geändert werden. Es ist ein Fehler aufgetreten.');
           throw new Error('This request has failed ' + res.status);
         }
         else {
